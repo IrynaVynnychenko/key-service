@@ -1,22 +1,17 @@
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
-const parseArgs = require('minimist');
 const gulp = require('gulp');
 const concat = require('gulp-concat');
-const minifyCSS = require('gulp-minify-css');
-const sass = require('gulp-sass');
+const minifyCSS = require('gulp-clean-css');
+const sass = require('gulp-sass')(require('sass'));
 const htmlmin = require('gulp-htmlmin');
 const clean = require('gulp-clean');
 const autoprefixer = require('gulp-autoprefixer');
-const image = require('gulp-image');
+const image = require('gulp-imagemin');
 const replace = require('gulp-replace');
 const rename = require('gulp-rename');
 const named = require('vinyl-named');
 const open = require('gulp-open');
 const fileinclude = require('gulp-file-include');
-const webpackStream = require('webpack-stream');
 const connect = require('gulp-connect');
-
-const argv = parseArgs(process.argv.slice(2));
 
 gulp.task(
   'image-min',
@@ -98,9 +93,6 @@ gulp.task('copy-fonts', function () {
   return gulp.src(['./src/fonts/*']).pipe(gulp.dest('./dist/fonts/'));
 });
 
-gulp.task('copy-simple-picker', function () {
-  return gulp.src(['./node_modules/simplepicker/dist/simplepicker.css']).pipe(gulp.dest('./dist/css/'));
-});
 
 gulp.task('copy-js', function () {
   return gulp.src(['./src/js/libs/*.js']).pipe(gulp.dest('./dist/js/libs'));
@@ -178,7 +170,6 @@ const build = gulp.series(
   'pageHtml',
   'clean',
   'copy-fonts',
-  'copy-simple-picker',
   'image-min'
 );
 
