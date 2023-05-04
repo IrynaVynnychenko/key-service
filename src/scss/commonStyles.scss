@@ -18,9 +18,9 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1.4;
-  color: #000;
+  color: #333;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -79,4 +79,26 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
+section {
+  position: relative;
+}
+
+.container {
+  max-width: 1232px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 0px;
+  margin-bottom: 60px;
+}
+
 @import "./../components/header/header.scss";
+@import "./../components/gallery/gallery.scss";
+@import "./../components/footer/footer.scss";

@@ -1,0 +1,10 @@
+.gallery {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
