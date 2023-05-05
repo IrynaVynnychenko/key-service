@@ -1,10 +1,13 @@
 .footer {
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 100px;
 
     &-row {
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     &-logo {
@@ -14,6 +17,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media(max-width: 768px) {
+            width: 120px;
+            height: 120px;
+        }
 
         img {
             width: 100%;
@@ -35,6 +43,10 @@
         align-items: center;
         justify-content: flex-end;
         margin-bottom: 24px;
+
+        @media(max-width: 768px) {
+            justify-content: flex-start;
+        }
 
         a {
             width: 42px;
@@ -68,24 +80,32 @@
         }
     }
 
-    &-menu {
+    &-copyright {
+        margin-top: 80px;
+        background-color: #494b55;
+        text-align: center;
+        padding: 20px 16px;
+        color: #fff;
+    }
+
+    &-schedule {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
 
-        a {
+        @media(max-width: 768px) {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        &__title {
             font-size: 24px;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.5s;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
 
-            &:hover {
-                text-decoration: underline;
-                text-underline-offset: 4px;
-            }
-
-            &:not(:last-child) {
-                margin-right: 16px;
-            }
+        &__text {
+            font-size: 20px;
         }
     }
 }

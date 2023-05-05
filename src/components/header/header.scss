@@ -1,0 +1,52 @@
+.header {
+
+  &.footer {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .footer-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer-schedule__title {
+    font-size: 20px;
+  }
+
+  .footer-schedule__text {
+    font-size: 16px;
+  }
+
+  .footer-contacts__tel {
+    font-size: 24px;
+  }
+
+  .footer-contacts__socials {
+    margin-bottom: 16px;
+
+    a {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .footer-row {
+    @media(max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+
+  .footer-contacts__socials {
+    @media(max-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+
+  .footer-schedule {
+    @media(max-width: 576px) {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}

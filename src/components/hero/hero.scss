@@ -1,0 +1,96 @@
+.hero {
+  min-height: 600px;
+  background-image: url("../../images/hero-bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 160px;
+  padding-bottom: 120px;
+  margin-bottom: 120px;
+
+  @media(max-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  &-text {
+    position: relative;
+    margin-bottom: -240px;
+    max-width: 880px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    font-size: 20px;
+    line-height: 1.8;
+    z-index: 3;
+
+    @media(max-width: 768px) {
+      padding: 24px;
+      font-size: 14px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      margin-top: 48px;
+
+      @media(max-width: 768px) {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &-wrap {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      z-index: 1;
+      top: 10%;
+      left: 10%;
+      width: 50%;
+      height: 150px;
+      background-color: rgba(243, 116, 17, 0.5);
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      z-index: 2;
+      bottom: 10%;
+      right: 10%;
+      width: 50%;
+      height: 150px;
+      background-color: rgba(243, 116, 17, 0.5);
+    }
+  }
+
+  .title {
+    margin-bottom: 120px;
+    color: #fff;
+
+    @media(max-width: 768px) {
+      margin-bottom: 60px;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid #fff;
+      width: 100%;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 8px;
+      margin-top: 20px;
+    }
+  }
+}

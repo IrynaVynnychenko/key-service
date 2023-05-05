@@ -97,8 +97,66 @@ section {
   font-size: 48px;
   margin-top: 0px;
   margin-bottom: 60px;
+
+  @media(max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-call {
+  width: fit-content;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 24px;
+  background-color: rgba(243, 116, 17, 0.5);
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.35s;
+
+  @media(max-width: 768px) {
+    padding: 6px 16px;
+    height: 54px;
+    font-size: 18px;
+  }
+
+  span {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+
+    @media(max-width: 768px) {
+      width: 28px;
+      height: 28px;
+      margin-right: 6px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
 }
 
 @import "./../components/header/header.scss";
+@import "./../components/hero/hero.scss";
+@import "./../components/services/services.scss";
+@import "./../components/benefits/benefits.scss";
 @import "./../components/gallery/gallery.scss";
+@import "./../components/call/call.scss";
+@import "./../components/map/map.scss";
 @import "./../components/footer/footer.scss";
