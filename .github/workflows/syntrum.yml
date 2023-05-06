@@ -37,4 +37,5 @@ jobs:
           # password: ${{ secrets.password }}
           password: 'ZEncPkPT'
           local-dir: './dist/'
+          dangerous-clean-slate: true
           
