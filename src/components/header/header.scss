@@ -8,6 +8,11 @@
   .footer-logo {
     width: 80px;
     height: 80px;
+
+    @media(max-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   .footer-schedule__title {
@@ -31,22 +36,16 @@
     }
   }
 
-  .footer-row {
-    @media(max-width: 576px) {
-      flex-direction: column;
-    }
-  }
+  .footer-contacts {
 
-  .footer-contacts__socials {
-    @media(max-width: 768px) {
-      justify-content: flex-start;
+    @media(max-width: 520px) {
+      margin-top: 20px;
     }
-  }
 
-  .footer-schedule {
-    @media(max-width: 576px) {
-      margin-top: 16px;
-      margin-bottom: 16px;
+    &__socials {
+      @media(max-width: 768px) {
+        justify-content: flex-start;
+      }
     }
   }
 }
