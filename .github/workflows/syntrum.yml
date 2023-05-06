@@ -1,0 +1,40 @@
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# https://docs.github.com/en/actions/guides/building-and-testing-nodejs
+
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Reconfigure git to use HTTP authentication
+        run: >
+          git config --global url."https://github.com/".insteadOf
+          ssh://git@github.com/
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+
+      - name: Install dependencies and build
+        run: yarn && gulp build
+
+      - name: SFTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: '194.28.174.250'
+          username: 'key-city-service@massageschool.com.ua'
+          # password: ${{ secrets.password }}
+          password: 'ZEncPkPT'
+          local-dir: './dist/'
+          
