@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.4;
   color: #333;
@@ -37,7 +37,7 @@ button {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  font-family: "Inter", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   &:focus {
     outline: none;
@@ -115,6 +115,7 @@ section {
   border-radius: 8px;
   padding: 12px 32px;
   font-size: 24px;
+  font-weight: 700;
   background-color: rgba(243, 116, 17, 0.5);
   height: 64px;
   margin-left: auto;

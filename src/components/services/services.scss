@@ -8,28 +8,40 @@
   }
 
   &-title {
-    font-weight: 600px;
+    font-weight: 700;
     font-size: 24px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+
+    @media(max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   &-wrap {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 60px;
-
-    @media(max-width: 991px) {
-      row-gap: 60px;
-      column-gap: 32px;
-    }
+    gap: 24px;
 
     @media(max-width: 768px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
-      row-gap: 80px;
     }
   }
 
   &-wrap__item {
     position: relative;
+    padding: 24px;
+    background-color: #282425;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 768px) {
+      padding: 10px;
+    }
 
     &:nth-child(2),
     &:nth-child(4) {
@@ -45,7 +57,6 @@
   &-img {
     height: 360px;
     width: 100%;
-    position: relative;
 
     @media(max-width: 991px) {
       height: 280px;
@@ -58,52 +69,44 @@
       object-position: center;
       position: relative;
     }
-
-    &:before {
-      position: absolute;
-      content: '';
-      z-index: -1;
-      height: 200px;
-      width: 50%;
-      left: -20px;
-      bottom: -20px;
-      background-color: rgba(243, 116, 17, 0.5);
-    }
   }
 
   &-col {
-    width: 80%;
+    width: 100%;
     position: relative;
     z-index: 2;
-    margin-top: -60px;
     margin-left: auto;
-    background-color: white;
-    padding: 24px;
+    padding: 24px 0px;
     display: flex;
     flex-direction: column;
-    min-height: 440px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-
-    @media(max-width: 991px) {
-      width: 90%;
-      min-height: 480px;
-    }
+    flex-grow: 1;
+    color: #fff;
 
     @media(max-width: 768px) {
-      min-height: auto;
-      padding: 24px 16px;
+      padding: 24px 10px 20px;
     }
 
     .btn {
       margin-top: auto;
+      color: #fff;
+      background-color: rgba(243, 116, 17, 0.9);
 
       @media(max-width: 768px) {
         margin-top: 40px;
       }
     }
 
-    ul li {
-      margin-bottom: 6px;
+    ul {
+      margin-bottom: 40px;
+
+      @media(max-width: 768px) {
+        margin-bottom: 0px;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
     }
   }
 }
