@@ -33,9 +33,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: '194.28.174.250'
-          username: 'key-city-service@massageschool.com.ua'
-          # password: ${{ secrets.password }}
-          password: 'ZEncPkPT'
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
           local-dir: './dist/'
           dangerous-clean-slate: true
           
