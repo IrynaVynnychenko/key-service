@@ -4,6 +4,12 @@
 
   @media(max-width: 768px) {
     overflow: hidden;
+    padding-top: 60px;
+  }
+
+  &-title {
+    font-weight: 600px;
+    font-size: 24px;
   }
 
   &-wrap {
@@ -75,12 +81,12 @@
     padding: 24px;
     display: flex;
     flex-direction: column;
-    min-height: 400px;
+    min-height: 440px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 
     @media(max-width: 991px) {
       width: 90%;
-      min-height: 440px;
+      min-height: 480px;
     }
 
     @media(max-width: 768px) {
@@ -94,6 +100,10 @@
       @media(max-width: 768px) {
         margin-top: 40px;
       }
+    }
+
+    ul li {
+      margin-bottom: 6px;
     }
   }
 }

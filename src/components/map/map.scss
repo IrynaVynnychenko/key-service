@@ -4,24 +4,35 @@
   position: relative;
 
   @media(max-width: 768px) {
-    padding-top: 40px;
+    padding-top: 100px;
     padding-bottom: 80px;
   }
 
   &:before {
-      position: absolute;
-      z-index: 1;
-      content: "";
-      width: 50%;
-      height: 100%;
-      top: 0px;
-      left: 0px;
-      background-color: rgba(243, 116, 17, 0.5);
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 50%;
+    height: 50%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(243, 116, 17, 0.5);
+  }
+
+  &:after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 50%;
+    height: 50%;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(243, 116, 17, 0.5);
   }
 
   .container {
-      position: relative;
-      z-index: 2;
+    position: relative;
+    z-index: 2;
   }
 
   &-wrap {
@@ -29,6 +40,7 @@
     height: 600px;
     border: 24px solid #fff;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    margin-bottom: 24px;
 
     @media(max-width: 768px) {
       height: 320px;
@@ -38,6 +50,33 @@
     iframe {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+
+    @media(max-width: 576px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  &-place {
+    width: 100%;
+    border: 24px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+    @media(max-width: 768px) {
+      border-width: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
   }
 }

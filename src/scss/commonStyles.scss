@@ -122,6 +122,11 @@ section {
   text-decoration: none;
   color: #333;
   transition: all 0.35s;
+  box-shadow: rgba(243, 116, 17, 0.15) 0px 10px 20px 0px;
+
+  &:hover {
+    box-shadow: none;
+  }
 
   @media(max-width: 768px) {
     padding: 6px 16px;

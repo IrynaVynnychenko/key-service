@@ -33,6 +33,14 @@
       font-size: 14px;
     }
 
+    @media(max-width: 576px) {
+      padding: 24px 16px;
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+
     p {
       margin-bottom: 16px;
     }
@@ -48,28 +56,6 @@
 
   &-wrap {
     position: relative;
-
-    &:before {
-      position: absolute;
-      content: '';
-      z-index: 1;
-      top: 10%;
-      left: 10%;
-      width: 50%;
-      height: 150px;
-      background-color: rgba(243, 116, 17, 0.5);
-    }
-
-    &:after {
-      position: absolute;
-      content: '';
-      z-index: 2;
-      bottom: 10%;
-      right: 10%;
-      width: 50%;
-      height: 150px;
-      background-color: rgba(243, 116, 17, 0.5);
-    }
   }
 
   .title {
